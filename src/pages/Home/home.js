@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, LinearGradient } from 'react-native';
 
-export default function Home() {
+export default function Homepage() {
     const image = require('../../../assets/logo-brasileirão.png');
 
     //const onPressRound = () =>  }
