@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, LinearGradient } from 'react-native';
 
 export default function Home() {
     const image = require('../../../assets/logo-brasileirão.png');
