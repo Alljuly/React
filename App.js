@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Homepage from './src/pages/home/Home';
+import Home from './src/pages/Home';
+import DrawerRoute from './src/pages/routes/drawer/index.js';
 
 export default function App() {
   return (
-    <Homepage />
+    <Home/>
   );
 }
 
