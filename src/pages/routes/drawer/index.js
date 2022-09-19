@@ -15,18 +15,20 @@ export default function DrawerRoute() {
   const drawerContent = (props) => {
     return <ContentDrawer {...props} />
   }
-  const styleItens = { styles: ({navigation}) => ({ 
-    drawerStyle: {backgroundColor: 'rgb(81, 98, 88)', color: 'rgb(240, 240, 187)'},
-    drawerLabelStyle: { fontSize: 20, fontWeight: 'bold' }, 
-    drawerActiveBackgroundColor: 'rgb(12, 82, 12)',
-    drawerActiveTintColor: 'rgb(240, 240, 187)',
-    drawerInactiveTintColor: "rgb(173, 173, 140)",
-    headerLeft: (focused, size) => <Pressable onPress={navigation.toggleDrawer}>
-      <Ionicons name='reorder-three-outline' size={42} color='rgba(228,189,0,255)'></Ionicons>  
-    </Pressable>
-  })};
-  const titleFormat = (title) => <Text style={{fontSize: 24, fontWeight: 'bold', color: '#fff', paddingBottom: 5}}>{title}</Text>;
-  const headerStyle = {backgroundColor: 'rgb(0, 128, 0, 0.8)'};
+  const styleItens = {
+    styles: ({ navigation }) => ({
+      drawerStyle: { backgroundColor: 'rgb(81, 98, 88)', color: 'rgb(240, 240, 187)' },
+      drawerLabelStyle: { fontSize: 20, fontWeight: 'bold' },
+      drawerActiveBackgroundColor: 'rgb(12, 82, 12)',
+      drawerActiveTintColor: 'rgb(240, 240, 187)',
+      drawerInactiveTintColor: "rgb(173, 173, 140)",
+      headerLeft: (focused, size) => <Pressable onPress={navigation.toggleDrawer}>
+        <Ionicons name='reorder-three-outline' size={42} color='rgba(228,189,0,255)'></Ionicons>
+      </Pressable>
+    })
+  };
+  const titleFormat = (title) => <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#fff', paddingBottom: 5 }}>{title}</Text>;
+  const headerStyle = { backgroundColor: 'rgb(0, 128, 0, 0.8)' };
   return (
     <Drawer.Navigator screenOptions={styleItens.styles} drawerContent={drawerContent}>
       <Drawer.Screen name="Home" component={Home} options={{
@@ -47,6 +49,6 @@ const styles = StyleSheet.create({
   }
 })
   /*
-  yarn add @react-navigation/native
-  yarn add react-native-screens react-native-safe-area-context
-  */
+yarn add @react-navigation/native
+yarn add react-native-screens react-native-safe-area-context
+*/
