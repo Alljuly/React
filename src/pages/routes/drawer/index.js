@@ -1,10 +1,10 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from '../React/src/pages/Home/home.js';
+import Home from '../../Home/home.js';
 
 
 import Ionicons from '@expo/vector-icons/Ionicons';
-import ContentDrawer from './contentDrawer';
+import ContentDrawer from './drawercontent.js';
 import { Pressable, StyleSheet, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
@@ -36,8 +36,7 @@ export default function DrawerRoute() {
         headerTitle: '', headerTransparent: true, drawerIcon: ({ focused, size }) => {
           return <Ionicons name='home' size={size} color={focused ? 'rgb(240, 240, 187)' : 'rgb(173, 173, 140)'}></Ionicons>
         }
-      }} />
-
+      }} />      
     </Drawer.Navigator>
   );
 

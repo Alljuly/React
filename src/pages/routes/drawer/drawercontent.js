@@ -1,10 +1,10 @@
 import React from 'react';
 import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer'
+import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 
 export default function ContentDrawer(props) {
 
-  const imageHeader = require('../../../assets/bola.png');
+    const imageHeader = require('../../../../assets/bola.png')
   const year = new Date().getFullYear();
 
   const header = (color, focused) => {
@@ -42,3 +42,4 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
   }
 })
+

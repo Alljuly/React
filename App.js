@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import DrawerRoute from './src/pages/routes/drawer/index.js';
 import Home from '../React/src/pages/Home/home.js'
 
 export default function App() {
   return (
-    <Home />
+    <NavigationContainer>
+    <DrawerRoute/>
+    </NavigationContainer>
   );
 }
 
