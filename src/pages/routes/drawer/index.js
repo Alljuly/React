@@ -37,6 +37,13 @@ export default function DrawerRoute() {
           return <Ionicons name='home' size={size} color={focused ? 'rgb(240, 240, 187)' : 'rgb(173, 173, 140)'}></Ionicons>
         }
       }} />      
+      <Drawer.Screen name="Teams" component={Teams} options={{
+        headerStyle: headerStyle,
+        drawerLabel: "Times", headerTitle: () => titleFormat("Times"),
+        drawerIcon: ({ focused, size }) => {
+          return <Ionicons name='people' size={size} color={focused ? 'rgb(240, 240, 187)' : 'rgb(173, 173, 140)'}></Ionicons>
+        }
+      }} />
     </Drawer.Navigator>
   );
 
