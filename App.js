@@ -1,11 +1,15 @@
+//import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import DrawerRoute from './src/pages/routes/drawer/index.js';
-import Home from '../React/src/pages/Home/home.js'
+import Home from '../React/src/pages/home/home.js'
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <Home />
+    <NavigationContainer>
+      <DrawerRoute />
+    </NavigationContainer>
   );
 }
 

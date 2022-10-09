@@ -1,6 +1,6 @@
-/*import React from 'react';
+import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from '../React/src/pages/Home/home.js';
+import Home from '../../home/home.js';
 
 
 import Ionicons from '@expo/vector-icons/Ionicons';
