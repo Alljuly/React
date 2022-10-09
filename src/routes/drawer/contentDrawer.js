@@ -4,7 +4,8 @@ import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navi
 
 export default function ContentDrawer(props) {
 
-    const imageHeader = require('../../../../assets/bola.png');
+    const imageHeader = require('../../../assets/bola.png');
+
     const year = new Date().getFullYear();
 
     const header = (color, focused) => {

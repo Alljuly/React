@@ -1,6 +1,7 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from '../../home/home.js';
+import Home from '../../pages/home/home.js';
+import Teams from '../../pages/teams/teams.js';
 
 
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -37,6 +38,13 @@ export default function DrawerRoute() {
           return <Ionicons name='home' size={size} color={focused ? 'rgb(240, 240, 187)' : 'rgb(173, 173, 140)'}></Ionicons>
         }
       }} />
+      <Drawer.Screen name='Teams' component={Teams} options={{
+        drawerLabel: 'Teams',
+        headerTitle: '', headerTransparent: true, drawerIcon: ({ focused, size }) => {
+          return <Ionicons name='people' size={size} color={focused ? 'rgb(240,240,187)' : 'rgb(173, 173, 140)'}></Ionicons>
+        }
+      }}
+      />
 
     </Drawer.Navigator>
   );
