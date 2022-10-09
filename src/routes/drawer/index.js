@@ -29,7 +29,7 @@ export default function DrawerRoute() {
     })
   };
   const titleFormat = (title) => <Text style={{ fontSize: 24, fontWeight: 'bold', color: '#fff', paddingBottom: 5 }}>{title}</Text>;
-  const headerStyle = { backgroundColor: 'rgb(0, 128, 0, 0.8)' };
+  const headerStyle = { backgroundColor: 'rgba(0, 128, 0, 0.8)' };
   return (
     <Drawer.Navigator screenOptions={styleItens.styles} drawerContent={drawerContent}>
       <Drawer.Screen name="Home" component={Home} options={{
@@ -39,13 +39,11 @@ export default function DrawerRoute() {
         }
       }} />
       <Drawer.Screen name='Teams' component={Teams} options={{
-        drawerLabel: 'Teams',
-        headerTitle: '', headerTransparent: true, drawerIcon: ({ focused, size }) => {
-          return <Ionicons name='people' size={size} color={focused ? 'rgb(240,240,187)' : 'rgb(173, 173, 140)'}></Ionicons>
+        headerStyle: headerStyle,
+        drawerLabel: "Times", headerTitle: () => titleFormat("Times"), drawerIcon: ({ focused, size }) => {
+          return <Ionicons name='people' size={size} color={focused ? 'rgb(240, 240, 187)' : 'rgb(173, 173, 140)'}></Ionicons>
         }
-      }}
-      />
-
+      }} />
     </Drawer.Navigator>
   );
 
